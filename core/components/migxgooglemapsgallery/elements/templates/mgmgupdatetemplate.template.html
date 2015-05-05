@@ -1,0 +1,67 @@
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<base href="[[++site_url]]">
+
+[[mgmgPrepareOutput? 
+&scriptTpl=`mgmgScriptsUpdate`
+&markergroupOptionTpl=`mgmgGroupOption`
+&ajaxurl=`[[~16]]`
+&getfiles_ajaxurl=`[[~17]]`
+&resource_ids=`19,20`
+&tvname=`markers`
+&map_center=`49.84506373417466, 9.597742980957037`
+]]
+</head>
+<body>
+
+  <div id="mapCanvas"></div>
+  <div class="right">
+  <div id="infoPanel">
+    <button id="btn_createmarker" onclick="creatorCreateMarker();" >Marker erstellen</button>
+    <button id="btn_removemarker" onclick="RemoveMarker();" >Marker entfernen</button>
+    <button id="btn_createmarker" onclick="saveMarkers();" >Gruppe speichern</button>
+    <select name="markergroup" id="select-markergroup" onchange="changeMarkerGroup();">
+    <option  value="">Zu bearbeitende Markergruppe wählen</option>    
+    [[+markergroup_options]]
+    </select>
+    <br/>
+    <!--
+    <b>Marker status:</b>
+    <div id="markerStatus"><i>Click and drag the marker.</i></div>
+    -->
+    <b>Marker Creator:</b>
+    <div id="info"></div>
+    <b>Closest matching address:</b>
+    <div id="address"></div>
+    <b>Aktiver Marker:</b>
+    <div id="info2"></div>    
+    <b>Distanz Creator-Aktiver Marker:</b>
+    <div id="distance"></div> 
+    <b>Datei:</b>
+    <div id="marker-file"></div> 
+    <b>Title:</b>
+    <div id="marker-title"><input onchange="setTitle()" id="input-title" type="text" name="title" /></div>         
+  </div>
+
+<div class="image-browser">
+
+[[!FileLister? 
+&path = `ruderstrecke` 
+&showFiles = `0`
+&directoryTpl = `imagesBrowserDirTpl`
+]]
+<div id="image-browser-files">
+<table >
+[[!FileLister? 
+&path = `ruderstrecke/nachrothenfels/` 
+&fileTpl=`imagesBrowserTpl`
+&sortBy=`filename`
+]]
+
+</table>
+</div>
+</div>
+</div>
+</body>
+</html>

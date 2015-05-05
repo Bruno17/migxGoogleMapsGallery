@@ -1,0 +1,36 @@
+[
+  {
+    "id":3,
+    "source":0,
+    "property_preprocess":false,
+    "templatename":"mgmgBaseTemplate",
+    "description":"",
+    "editor_type":0,
+    "category":0,
+    "icon":"",
+    "template_type":0,
+    "locked":false,
+    "properties":null,
+    "static":false,
+    "static_file":"",
+    "filename":"mgmgbasetemplate.template.html",
+    "category_name":"migxGoogleMapsGallery"
+  },
+  {
+    "id":5,
+    "source":0,
+    "property_preprocess":false,
+    "templatename":"mgmgUpdateTemplate",
+    "description":"",
+    "editor_type":0,
+    "category":0,
+    "icon":"",
+    "template_type":0,
+    "locked":false,
+    "properties":null,
+    "static":false,
+    "static_file":"",
+    "filename":"mgmgupdatetemplate.template.html",
+    "category_name":"migxGoogleMapsGallery"
+  }
+]

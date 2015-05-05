@@ -1,0 +1,35 @@
+<script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false&libraries=geometry"></script>
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<link type="text/css" rel="stylesheet" href="assets/components/migxgooglemapsgallery/css/style.css"></style>
+<script type="text/javascript" src="assets/components/migxgooglemapsgallery/js/basic.js"></script>
+<script type="text/javascript" >
+var ajaxurl='[[+ajaxurl]]';
+var getfiles_ajaxurl='[[+getfiles_ajaxurl]]';
+var resource_ids='[[+resource_ids]]';
+var markergroups = '[[+markergroups]]';
+var map_center = new google.maps.LatLng([[+map_center]]);
+
+function onChangeCurrentMarker(){
+  var el = document.getElementById('marker-file');
+  if (el){
+  if (typeof currentmarker['file'] != 'undefined' ){
+      el.innerHTML = '<img src="' + currentmarker['file'] + '" />' ;
+  }else{
+      el.innerHTML = '';  
+  }    
+  } 
+
+  var el = $('#marker-title');
+  if (el){
+  if (typeof currentmarker['title'] != 'undefined' ){
+      el.html(currentmarker['title']);
+  }else{
+     el.html('');
+  }    
+  }
+
+  updateMarkerPosition(currentmarker,'info2');
+}
+
+</script>

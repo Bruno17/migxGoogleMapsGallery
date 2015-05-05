@@ -1,0 +1,32 @@
+  #mapCanvas {
+    float: left;
+    height: 100%;
+    width: 30%;
+  }
+  #infoPanel {
+    float: left;
+    height: 400px;
+  }
+  #infoPanel div {
+    margin-bottom: 5px;
+  }
+  .right{
+    height: 100%;
+    overflow: auto;
+    float: left;
+    padding-left: 10px;
+    width: calc(70% - 10px);
+  }
+
+  .image-browser {
+    clear: both;
+    float: left;
+    width: 100%;
+  }
+  .browser-image {
+    
+  }
+  
+  #marker-file img{
+    width: 100%;
+  }
